@@ -170,9 +170,9 @@ img {
 /* Media Queries for responsiveness */
 
 @media screen and (max-width: 700px) {
-	body {
+	/* body {
 		height: 100vh;
-	}
+	} */
 
 	.main-container {
 		justify-content: center;
@@ -208,12 +208,11 @@ img {
 
 	.player-x-container,
 	.player-o-container {
-		width: 75%;
+		width: 90%;
 	}
 	.player-x,
 	.player-o {
-		width: 30%;
-		padding: 1px 16px;
+		width: 25%;
 	}
 
 	.game {
@@ -228,12 +227,12 @@ img {
 @media screen and (max-width: 500px) {
 	.player-x-container,
 	.player-o-container {
-		width: 80%;
+		width: 90%;
 	}
 	.player-x,
 	.player-o {
-		width: 35%;
-		padding: 1px 10px;
+		width: 36%;
+		padding: 1px 10px !important;
 	}
 
 	.game {
@@ -268,7 +267,7 @@ img {
 
 @media screen and (max-width: 300px) {
 	.game-container {
-		height: 65%;
+		height: 60%;
 	}
 
 	.player-x-container,
@@ -278,6 +277,8 @@ img {
 	.player-x,
 	.player-o {
 		width: 40%;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
 	}
 
 	.game-btn-container {
