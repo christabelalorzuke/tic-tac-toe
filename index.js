@@ -64,14 +64,12 @@ boxes.forEach((box, i) => {
 			// Add a css class to the selected box to apply a style that indicates that it has been selected
 			element.classList.add("selected-column");
 
-			// Check if the current player has won
+			// Check if the current player has won or if there's a tie
 			if (checkWinner(i)) {
 				alert(`player ${currentPlayer.icon} has won!`);
 				document.location.reload(true);
 				button.innerHTML = "Start";
-			}
-
-			if (checkTie()) {
+			} else if (checkTie()) {
 				alert("It's a tie!");
 				document.location.reload(true);
 				button.innerHTML = "Start";
