@@ -151,9 +151,11 @@ const checkWinner = (currentIndex) => {
    which 3 boxes to check for a possible win.
    It checks for a win by comparing the boxes to the first one in the set (of three).
     */
-const isWinner = (currentIndex, increment) => {
+
+const isWinner = (relativeFirstIndex, increment) => {
 	// Set the first box which the rest will be compared to, and the number of loops
-	const relativeFirstBox = boxes[currentIndex];
+	const relativeFirstBox = boxes[relativeFirstIndex];
+	let currentIndex = relativeFirstIndex;
 	let numberOfLoops = 3;
 
 	for (currentIndex; currentIndex < boxes.length; currentIndex += increment) {
@@ -176,7 +178,7 @@ const isWinner = (currentIndex, increment) => {
 			return false;
 		}
 	}
-	
+
 	// If the loop runs sucessfully to the end, then there's a win so return true.
 	return true;
 };
